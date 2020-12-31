@@ -1,7 +1,7 @@
 import { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import BlogTiles from "../components/BlogTiles";
-import BlogPage from "../components/BlogPage";
+import BlogTiles from "../pages/BlogTiles";
+import BlogPage from "../pages/BlogPage";
 import NotFound from "../pages/NotFound";
 
 class Router extends Component {
