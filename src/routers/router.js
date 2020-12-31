@@ -2,6 +2,7 @@ import { Component } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import BlogTiles from "../components/BlogTiles";
 import BlogPage from "../components/BlogPage";
+import NotFound from "../pages/NotFound";
 
 class Router extends Component {
   render() {
@@ -12,6 +13,7 @@ class Router extends Component {
           <Switch>
             <Route path="/blogs" exact component={BlogTiles} />
             <Route path="/blogs/:id" exact component={BlogPage} />
+            <Route component={NotFound} />
           </Switch>
         </BrowserRouter>
       </div>
