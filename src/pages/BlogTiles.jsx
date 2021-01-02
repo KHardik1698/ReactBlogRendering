@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { Link } from "react-router-dom";
 import blogsUrl from "../apiCalls/ApiCalls";
 import TilesMarkup from "../components/TilesMarkup";
 import NotFound from "./NotFound";
@@ -27,7 +28,13 @@ class BlogTiles extends Component {
           <h1>Loading...</h1>
         ) : this.state.status === "Successful" ? (
           this.state.blogs.map((blog) => {
-            return <TilesMarkup key={blog.id} blog={blog} />;
+            return (
+              <div key={blog.id}>
+                <Link to={`/blogs/${blog.id}`}>
+                  <TilesMarkup blog={blog} />;
+                </Link>
+              </div>
+            );
           })
         ) : (
           <NotFound />

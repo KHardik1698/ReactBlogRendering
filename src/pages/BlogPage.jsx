@@ -9,7 +9,6 @@ class BlogPage extends Component {
     status: "",
   };
   componentDidMount = (event) => {
-    // fetch(blogsUrl + "2rvqpdbpka3n3fhh")
     fetch(blogsUrl + this.props.match.params.id)
       .then((response) => {
         return response.json();

@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { Link } from "react-router-dom";
 
 class BlogMarkup extends Component {
   render() {
@@ -11,7 +12,9 @@ class BlogMarkup extends Component {
         {this.props.blog.links.map((link) => {
           return (
             <div key={link.id}>
-              <p>{link.title}</p>
+              <Link to={`/blogs/${link.id}`}>
+                <p>{link.title}</p>
+              </Link>
             </div>
           );
         })}
