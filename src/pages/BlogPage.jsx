@@ -1,6 +1,7 @@
 import { Component } from "react";
 import blogsUrl from "../apiCalls/ApiCalls";
 import BlogMarkup from "../components/BlogMarkup";
+import NotFound from "./NotFound";
 
 class BlogPage extends Component {
   state = {
@@ -8,7 +9,8 @@ class BlogPage extends Component {
     status: "",
   };
   componentDidMount = (event) => {
-    fetch(blogsUrl + "2rvqpdbpka3n3fhh")
+    // fetch(blogsUrl + "2rvqpdbpka3n3fhh")
+    fetch(blogsUrl + this.props.match.params.id)
       .then((response) => {
         return response.json();
       })
@@ -22,8 +24,18 @@ class BlogPage extends Component {
   render() {
     return (
       <div>
-        <h1>Blog Page Component</h1>
-        <BlogMarkup blog={this.state.blog} status={this.state.status} />
+        {this.state.status === "" ? (
+          <h1>Loading...</h1>
+        ) : this.state.status === "Successful" &&
+          this.state.blog !== undefined ? (
+          <BlogMarkup
+            blog={this.state.blog}
+            status={this.state.status}
+            {...this.props}
+          />
+        ) : (
+          <NotFound />
+        )}
       </div>
     );
   }

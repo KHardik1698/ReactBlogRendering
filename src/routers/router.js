@@ -10,7 +10,6 @@ class Router extends Component {
     return (
       <div>
         <BrowserRouter>
-          <h1>Hello</h1>
           <Switch>
             <Route path="/" exact component={App} />
             <Route path="/blogs" exact component={BlogTiles} />

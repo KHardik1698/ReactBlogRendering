@@ -1,6 +1,7 @@
 import { Component } from "react";
 import blogsUrl from "../apiCalls/ApiCalls";
 import TilesMarkup from "../components/TilesMarkup";
+import NotFound from "./NotFound";
 
 class BlogTiles extends Component {
   state = {
@@ -22,10 +23,15 @@ class BlogTiles extends Component {
   render() {
     return (
       <div>
-        <h1>Blog Tiles Component</h1>
-        {this.state.blogs.map((blog) => {
-          return <TilesMarkup key={blog.id} blog={blog} />;
-        })}
+        {this.state.status === "" ? (
+          <h1>Loading...</h1>
+        ) : this.state.status === "Successful" ? (
+          this.state.blogs.map((blog) => {
+            return <TilesMarkup key={blog.id} blog={blog} />;
+          })
+        ) : (
+          <NotFound />
+        )}
       </div>
     );
   }
