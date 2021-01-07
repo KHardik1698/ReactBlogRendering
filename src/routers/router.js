@@ -13,7 +13,13 @@ class Router extends Component {
           <Switch>
             <Route path="/" exact component={App} />
             <Route path="/blogs" exact component={BlogTiles} />
-            <Route path="/blogs/:id" exact component={BlogPage} />
+            <Route
+              path="/blogs/:id"
+              exact
+              render={(props) => {
+                return <BlogPage {...props} />;
+              }}
+            />
             <Route component={NotFound} />
           </Switch>
         </BrowserRouter>

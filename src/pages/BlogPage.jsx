@@ -7,6 +7,7 @@ class BlogPage extends Component {
   state = {
     blog: [],
     status: "",
+    currentBlogId: "",
   };
   componentDidMount = (event) => {
     fetch(blogsUrl + this.props.match.params.id)
@@ -14,7 +15,46 @@ class BlogPage extends Component {
         return response.json();
       })
       .then((data) => {
-        this.setState({ blog: data.blogData, status: "Successful" });
+        this.setState({
+          blog: data.blogData,
+          status: "Successful",
+          currentBlogId: this.props.match.params.id,
+        });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  componentDidUpdate = (event) => {
+    if (this.state.currentBlogId !== this.props.match.params.id) {
+      if (this.state.status !== "") this.setState({ status: "" });
+      fetch(blogsUrl + this.props.match.params.id)
+        .then((response) => {
+          return response.json();
+        })
+        .then((data) => {
+          this.setState({
+            blog: data.blogData,
+            status: "Successful",
+            currentBlogId: data.blogData.id,
+          });
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+  };
+  getBlog = (id) => {
+    fetch(blogsUrl + id)
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        this.setState({
+          blog: data.blogData,
+          status: "Successful",
+          currentBlogId: id,
+        });
       })
       .catch((err) => {
         console.log(err);
@@ -30,6 +70,7 @@ class BlogPage extends Component {
           <BlogMarkup
             blog={this.state.blog}
             status={this.state.status}
+            getBlog={this.getBlog}
             {...this.props}
           />
         ) : (

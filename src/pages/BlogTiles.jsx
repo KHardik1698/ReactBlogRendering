@@ -31,7 +31,7 @@ class BlogTiles extends Component {
             return (
               <div key={blog.id}>
                 <Link to={`/blogs/${blog.id}`}>
-                  <TilesMarkup blog={blog} />;
+                  <TilesMarkup blog={blog} />
                 </Link>
               </div>
             );

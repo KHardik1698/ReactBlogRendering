@@ -9,10 +9,13 @@ class BlogMarkup extends Component {
         <h3>{this.props.blog.author}</h3>
         <img src={this.props.blog.imageUrl} alt="Blog" />
         <p>{this.props.blog.content}</p>
-        {this.props.blog.links.map((link) => {
+        {this.props.blog.links.map((link, i) => {
           return (
-            <div key={link.id}>
-              <Link to={`/blogs/${link.id}`}>
+            <div key={`${link.id}${i}`}>
+              <Link
+                to={`/blogs/${link.id}`}
+                onClick={() => this.props.getBlog(link.id)}
+              >
                 <p>{link.title}</p>
               </Link>
             </div>
