@@ -26,19 +26,16 @@ class BlogTiles extends Component {
     return (
       <div>
         {this.state.status === "" ? (
-          <h1>Loading...</h1>
+          <h1 className={styles["loading"]}>Loading...</h1>
         ) : this.state.status === "Successful" ? (
           <div>
             <h1 className={styles["blogs-header"]}>My Blogs</h1>
             <div className={styles["main-container"]}>
-              {this.state.blogs.map((blog) => {
+              {this.state.blogs.map((blog, i) => {
                 return (
                   <div className={styles["card-container"]} key={blog.id}>
-                    <Link
-                      className={styles["card-link"]}
-                      to={`/blogs/${blog.id}`}
-                    >
-                      <TilesMarkup blog={blog} />
+                    <Link className={styles["card-link"]} to={`/blogs/${blog.id}`}>
+                      <TilesMarkup blog={blog} i={i + 1} />
                     </Link>
                   </div>
                 );

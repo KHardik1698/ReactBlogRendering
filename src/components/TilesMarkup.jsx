@@ -6,14 +6,12 @@ class TilesMarkup extends Component {
     return (
       <div>
         <div className={styles["blog-header"]}>
-          <h1 className={styles["blog-title"]}>{this.props.blog.title}</h1>
-          <h1 className={styles["blog-author"]}>{this.props.blog.author}</h1>
+          <p className={styles["blog-title"]}>
+            {this.props.i}: {this.props.blog.title}
+          </p>
+          <p className={styles["blog-author"]}>- a Blog by {this.props.blog.author}</p>
         </div>
-        <img
-          className={styles["blog-image"]}
-          src={this.props.blog.imageUrl}
-          alt="Blog"
-        />
+        <img className={styles["blog-image"]} src={this.props.blog.imageUrl} alt="Blog" />
       </div>
     );
   }

@@ -65,8 +65,7 @@ class BlogPage extends Component {
       <div>
         {this.state.status === "" ? (
           <h1>Loading...</h1>
-        ) : this.state.status === "Successful" &&
-          this.state.blog !== undefined ? (
+        ) : this.state.status === "Successful" && this.state.blog !== undefined ? (
           <BlogMarkup
             blog={this.state.blog}
             status={this.state.status}
