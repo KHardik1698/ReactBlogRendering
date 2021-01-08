@@ -1,0 +1,25 @@
+.blog-container {
+  text-align: center;
+}
+.blog-title {
+  font-size: 30px;
+}
+.blog-author {
+  font-size: 30px;
+}
+.blog-image {
+  width: 50%;
+}
+.blog-content {
+  text-align: justify;
+  font-size: 18px;
+}
+.blog-links {
+  background-color: black;
+  /* velvet-red maroon white */
+}
+.blog-related-link {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
