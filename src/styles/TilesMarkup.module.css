@@ -1,0 +1,15 @@
+.blog-header {
+  padding: 2vh 1vh;
+}
+.blog-title {
+  color: black;
+  font-size: 18px;
+}
+.blog-author {
+  color: black;
+  font-size: 18px;
+}
+.blog-image {
+  width: 80%;
+  padding: 1vh;
+}
