@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+}
+.not-found-container {
+  width: 100vw;
+  height: 100vh;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  /* border: 1px solid blue; */
+  background: url("https://image.freepik.com/free-vector/404-error-page-found_41910-364.jpg")
+    no-repeat center;
+}
+.back-button {
+  margin-top: 20%;
+}
+/* .not-found-image {
+  width: 60%;
+  border: 1px solid red;
+} */
