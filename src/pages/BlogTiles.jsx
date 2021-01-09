@@ -31,8 +31,8 @@ class BlogTiles extends Component {
           <h1 className={styles["loading"]}>Loading...</h1>
         ) : this.state.status === "Successful" ? (
           <div>
-            <Header />
             <div className={styles["body-container"]}>
+              <Header />
               <h1 className={styles["blogs-header"]}>Blogs Collection</h1>
               <div className={styles["main-container"]}>
                 {this.state.blogs.map((blog, i) => {
@@ -45,8 +45,8 @@ class BlogTiles extends Component {
                   );
                 })}
               </div>
+              <Footer />
             </div>
-            <Footer />
           </div>
         ) : (
           <NotFound />

@@ -3,9 +3,12 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  background-color: #cce6ff;
+  box-shadow: 0px 0px 10px 5px rgb(75, 189, 52);
 }
 .header-logo {
-  width: 10%;
+  width: 20vh;
+  margin: 5vh;
 }
 .nav-link {
   text-decoration: none;
@@ -14,4 +17,8 @@
   color: black;
   list-style: none;
   font-size: 25px;
+}
+.header-container:hover {
+  transition-duration: 200ms;
+  box-shadow: 0px 0px 10px 10px rgb(58, 134, 43);
 }
