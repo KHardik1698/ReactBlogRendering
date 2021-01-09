@@ -1,6 +1,9 @@
 import { Component } from "react";
 import blogsUrl from "../apiCalls/ApiCalls";
 import BlogMarkup from "../components/BlogMarkup";
+import Loading from "../components/Loading";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import NotFound from "./NotFound";
 
 class BlogPage extends Component {
@@ -64,14 +67,18 @@ class BlogPage extends Component {
     return (
       <div>
         {this.state.status === "" ? (
-          <h1>Loading...</h1>
+          <Loading />
         ) : this.state.status === "Successful" && this.state.blog !== undefined ? (
-          <BlogMarkup
-            blog={this.state.blog}
-            status={this.state.status}
-            getBlog={this.getBlog}
-            {...this.props}
-          />
+          <div>
+            <Header />
+            <BlogMarkup
+              blog={this.state.blog}
+              status={this.state.status}
+              getBlog={this.getBlog}
+              {...this.props}
+            />
+            <Footer />
+          </div>
         ) : (
           <NotFound />
         )}
