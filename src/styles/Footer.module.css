@@ -1,0 +1,18 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.copyright {
+  margin: 5vh;
+}
+.icons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon {
+  margin: 5vh 10vh 20vh;
+}
