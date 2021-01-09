@@ -5,6 +5,7 @@ import Loading from "../components/Loading";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import NotFound from "./NotFound";
+import styles from "../styles/BlogPage.module.css";
 
 class BlogPage extends Component {
   state = {
@@ -69,7 +70,7 @@ class BlogPage extends Component {
         {this.state.status === "" ? (
           <Loading />
         ) : this.state.status === "Successful" && this.state.blog !== undefined ? (
-          <div>
+          <div className={styles["blog-container"]}>
             <Header />
             <BlogMarkup
               blog={this.state.blog}
