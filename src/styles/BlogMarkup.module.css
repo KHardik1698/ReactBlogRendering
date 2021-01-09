@@ -1,25 +1,42 @@
 .blog-container {
+  display: flex;
+  flex-direction: row;
   text-align: center;
+  margin: auto;
+}
+main,
+aside {
+  margin: 10vh 5vh;
 }
 .blog-title {
   font-size: 30px;
 }
 .blog-author {
-  font-size: 30px;
+  font-size: 20px;
 }
 .blog-image {
   width: 50%;
+  margin: 5vh;
 }
 .blog-content {
   text-align: justify;
   font-size: 18px;
 }
-.blog-links {
-  background-color: black;
-  /* velvet-red maroon white */
+.blog-links-container {
+  width: 40vh;
+  min-height: 50vh;
+  background-color: rgb(58, 134, 43);
 }
-.blog-related-link {
+.blog-links-header {
+  color: white;
+  font-size: 25px;
+  padding: 2vh;
+}
+.blog-link {
   text-decoration: none;
   color: white;
-  font-size: 15px;
+  font-size: 20px;
+}
+.blog-link-name {
+  padding: 2vh;
 }
