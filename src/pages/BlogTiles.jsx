@@ -2,6 +2,7 @@ import { Component } from "react";
 import { Link } from "react-router-dom";
 import blogsUrl from "../apiCalls/ApiCalls";
 import TilesMarkup from "../components/TilesMarkup";
+import Loading from "../components/Loading";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import NotFound from "./NotFound";
@@ -28,7 +29,7 @@ class BlogTiles extends Component {
     return (
       <div>
         {this.state.status === "" ? (
-          <h1 className={styles["loading"]}>Loading...</h1>
+          <Loading />
         ) : this.state.status === "Successful" ? (
           <div>
             <div className={styles["body-container"]}>
