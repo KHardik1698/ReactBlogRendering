@@ -1,14 +1,10 @@
 .body-container {
   background-color: #cce6ff;
 }
-.loading {
-  font-size: 30px;
-  text-align: center;
-  margin: 25% auto;
-}
 .blogs-header {
   text-align: center;
   padding-top: 5vh;
+  font-size: 30px;
 }
 .main-container {
   display: flex;
@@ -35,4 +31,21 @@
 .card-container:not(:hover) {
   transition-duration: 300ms;
   transform: scale(1);
+}
+@media (max-width: 700px) {
+  .main-container {
+    flex-direction: column;
+  }
+  .card-container {
+    width: 80%;
+    margin: 3vh auto;
+  }
+  .blogs-header {
+    font-size: 20px;
+  }
+}
+@media (max-width: 200px) {
+  .blogs-header {
+    font-size: 10px;
+  }
 }

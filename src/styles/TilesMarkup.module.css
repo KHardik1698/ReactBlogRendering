@@ -19,3 +19,39 @@
   border-radius: 10%;
   padding: 1vh;
 }
+@media (max-width: 700px) {
+  .blog-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .blog-image {
+    width: 50%;
+    height: 50%;
+    margin: auto;
+  }
+}
+@media (max-width: 300px) {
+  .blog-title {
+    font-size: 15px;
+  }
+  .blog-author {
+    font-size: 12px;
+  }
+}
+@media (max-width: 200px) {
+  .blog-header {
+    margin: auto;
+  }
+  .blog-title {
+    font-size: 8vw;
+    margin: 0px;
+    min-height: 3vh;
+  }
+  .blog-author {
+    font-size: 6vw;
+    margin: 0px;
+  }
+  .blog-image {
+    padding: 0px;
+  }
+}
