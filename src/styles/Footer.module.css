@@ -22,3 +22,42 @@
   transition-duration: 200ms;
   box-shadow: 0px 0px 10px 10px rgb(58, 134, 43);
 }
+@media (max-width: 1000px) {
+  .icon {
+    margin: 0vh 5vh 5vh;
+  }
+}
+@media (max-width: 700px) {
+  .copyright {
+    font-size: 25px;
+  }
+  .icon {
+    margin: 0vh 2vh 5vh;
+  }
+}
+@media (max-width: 500px) {
+  .copyright {
+    font-size: 20px;
+  }
+  .icon {
+    margin: 0vh 1vh 5vh;
+  }
+}
+@media (max-width: 400px) {
+  .icons-container {
+    flex-direction: column;
+  }
+  .copyright {
+    margin: 5vh;
+    font-size: 15px;
+  }
+  .icon {
+    margin: 0px;
+  }
+}
+@media (max-width: 100px) {
+  .copyright {
+    margin: 2vh;
+    font-size: 10px;
+  }
+}

@@ -48,4 +48,7 @@
   .blogs-header {
     font-size: 10px;
   }
+  .card-container {
+    margin: 2vh auto;
+  }
 }
