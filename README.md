@@ -3,7 +3,7 @@
 This Repository contains a Project which has the React Frontend for Blogs Rendering.\
 This Project is created using a Modular approach, where various functionalities are divided into various Components & Pages.
 
-> # `Backend/Data-Source:`
+> # Backend/Data-Source:
 
 The Backend/Data-Source for getting the Blogs Data is located at:\
 https://node-blogs-backend.herokuapp.com/blogs/
@@ -11,11 +11,16 @@ https://node-blogs-backend.herokuapp.com/blogs/
 This Backend Project is created & uploaded on:\
 https://github.com/KHardik1698/NodeBlogsBackend.git
 
-> # `Api Calls Component:`
+> # Navigation:
+
+**http://localhost:3000/blogs** will be the Home Page for Blogs.\
+**http://localhost:3000/blogs/blogId** will be the Home Page for Individual Blog.
+
+> # Api Calls Component:
 
 This File contains the Backend Link from where the data will be fetched.
 
-> # `Components:`
+> # Components:
 
 The Components Folder contains all the smaller Components which contains some small parts of the entire Project, which are common to multiple pages.\
 It contains Loading Component, Header Component, Footer Component, Tiles Markup Component & Blog Markup Component.\
@@ -25,12 +30,12 @@ The Footer Component contains Copyright Information & Social Media Icons, which 
 The Tiles Markup Component contains contents for Blog Tile, i.e. a Blog Title, Blog Author & Blog Image.\
 The Blog Markup Component contains contents for Blog Page, i.e. a Blog Title, Blog Author, Blog Image, Blog Content, & a set of Related Links.
 
-> # `Images:`
+> # Images:
 
 The Images Folder contains all the Images needed for the Website.\
 Currently, there is only the Header Logo in this Folder.
 
-> # `Pages:`
+> # Pages:
 
 The Pages Folder contains all the Pages Components to be served for any given URL Route.\
 It contains Blog Tile Page Component, Blog Page Component & Not Found Component.\
@@ -41,11 +46,25 @@ This component will be used for every Blog Tile clicked as well as every Related
 It contains Loading Component, Header Component, Footer Component, Blog Markup Component & Not Found Component.\
 The Not Found Component contains a 404 Page Not Found Image as well as a Button to go back to the Blog Tiles Page.
 
-> # `Routers:`
+> # Routers:
 
 The Routers Folder contains the Router File which has all the Valid Routes which are to be used on the Website.\
 Also, it maps which component will be used for which Route.
 
-> # `Styles:`
+> # Styles:
 
 The Styles Folder contains all the Style Files for the Pages & Components.
+
+> # `Test 1`
+
+> # Test 2
+
+> `Test 3`
+
+# `Test 4`
+
+# Test 5
+
+> Test 6
+
+`Test 7`
