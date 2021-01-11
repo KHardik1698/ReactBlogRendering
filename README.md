@@ -55,16 +55,8 @@ Also, it maps which component will be used for which Route.
 
 The Styles Folder contains all the Style Files for the Pages & Components.
 
-> # `Test 1`
+> # Demo:
 
-> # Test 2
-
-> `Test 3`
-
-# `Test 4`
-
-# Test 5
-
-> Test 6
-
-`Test 7`
+The Project is Hosted on Vercel.\
+This will be the Home Page for Blogs.\
+**https://react-blog-rendering.vercel.app/blogs**
